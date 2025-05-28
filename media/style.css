@@ -1,0 +1,81 @@
+body {
+    font-family: var(--vscode-font-family);
+    background-color: var(--vscode-editor-background);
+    color: var(--vscode-editor-foreground);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.toolbar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    background-color: #333738;
+    padding: 5px;
+    width: 100%;
+}
+
+.toolbar button {
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: var(--vscode-font-family);
+}
+
+.toolbar button:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+canvas {
+    flex: 1;
+    border: 1px solid var(--vscode-editorWidget-border);
+    cursor: crosshair;
+    width: 100%;
+}
+
+.notebook{
+    position: absolute;
+    top: 50px;
+    height: calc(100% - 84px);
+    width: 100vw;
+    background-color: transparent;
+    background-image: 
+        linear-gradient(to right, #ccc 1px, transparent 1px),
+        linear-gradient(to bottom, #ccc 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+.instructions {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--vscode-descriptionForeground);
+    text-align: center;
+}
+
+.toolbar button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar button iconify-icon{
+    font-size: 20px;
+}
